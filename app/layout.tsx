@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google"; 
 import "./globals.css";
+import QueryProvider from "../components/QueryProvider";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -23,7 +24,9 @@ export default function RootLayout({
       <body
         className={`${lato.variable} antialiased font-sans`} 
       >
-        {children}
+        <QueryProvider>
+          {children}
+        </QueryProvider>
       </body>
     </html>
   );
