@@ -23,7 +23,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex">
+    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 flex">
       {/* Left Side - Branding */}
       <div className="flex-1 flex flex-col justify-center px-12 bg-white">
         <div className="max-w-md">
@@ -34,7 +34,7 @@ export default function Login() {
           </h1>
           
           <p className="text-gray-600 mb-12">
-            Empowering healthcare providers with real-time predictive analytics and seamless IoT integration.
+            Empowering healthcare providers with AI predictive analytics and seamless IoT integration.
           </p>
           
           <div className="grid grid-cols-2 gap-8">

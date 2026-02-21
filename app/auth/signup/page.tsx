@@ -26,7 +26,7 @@ export default function SignUp() {
 	};
 
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex">
+		<div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 flex">
 			{/* Left Side - Branding */}
 			<div className="flex-1 flex flex-col justify-center px-12 bg-white">
 				<div className="max-w-md">
@@ -36,7 +36,7 @@ export default function SignUp() {
 					</h1>
 
 					<p className="text-gray-600 mb-12">
-						Empowering healthcare providers with real-time predictive analytics
+						Empowering healthcare providers with AI predictive analytics
 						and seamless IoT integration.
 					</p>
 
@@ -49,7 +49,7 @@ export default function SignUp() {
 								</span>
 							</div>
 							<p className="text-sm text-gray-600">
-								Live medical telemetry data monitoring
+								Live medical telemetry data monitoring.
 							</p>
 						</div>
 
@@ -61,7 +61,7 @@ export default function SignUp() {
 								</span>
 							</div>
 							<p className="text-sm text-gray-600">
-								AI-driven alert prediction alerts
+								AI-driven alert prediction alerts.
 							</p>
 						</div>
 					</div>
