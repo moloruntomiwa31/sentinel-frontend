@@ -120,9 +120,6 @@ export default function PatientDetail() {
             </div>
 
             <div className="flex gap-4 mt-6">
-              <button className="flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700">
-                ⚡ TRIGGER RAPID RESPONSE
-              </button>
               <button className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
                 <Bell size={16} />
                 Notify Nearby Physician
