@@ -10,6 +10,7 @@ import StatsCards from "../../components/dashboard/StatsCards";
 import PatientMonitoring from "../../components/dashboard/PatientMonitoring";
 import RecentAlerts from "../../components/dashboard/RecentAlerts";
 import RouteGuard from "../../components/RouteGuard";
+import LogoutButton from "../../components/dashboard/LogoutButton";
 import { useAuthStore } from "../../store/authStore";
 
 export default function Dashboard() {
@@ -129,14 +130,17 @@ export default function Dashboard() {
 						</ul>
 					</nav>
 
-					<footer className="mt-auto pt-6 border-t border-gray-200 text-xs text-gray-500">
-						<h2 className="font-semibold text-gray-700 text-lg">
-							{user?.full_name || 'Dr. User'}
-						</h2>
-						<h3 className="font-semibold text-gray-700">
-							{user?.hospital || 'Hospital'}
-						</h3>
-						<p>Medical Department</p>
+					<footer className="mt-auto grid gap-1 pt-3 border-t border-gray-200 text-xs text-gray-500">
+						<div>
+							<h2 className="font-semibold text-gray-700 text-lg">
+								{user?.full_name || "Dr. User"}
+							</h2>
+							<h3 className="font-semibold text-gray-700">
+								{user?.hospital || "Hospital"}
+							</h3>
+							<p>Medical Department</p>
+						</div>
+						<LogoutButton />
 					</footer>
 				</aside>
 
