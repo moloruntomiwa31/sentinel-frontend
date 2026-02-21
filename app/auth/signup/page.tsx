@@ -6,6 +6,7 @@ import Link from "next/link";
 export default function SignUp() {
 	const [formData, setFormData] = useState({
 		hospitalName: "",
+		staffName: '',
 		contactEmail: "",
 		password: "",
 	});
@@ -100,6 +101,20 @@ export default function SignUp() {
 									type="text"
 									name="hospitalName"
 									value={formData.hospitalName}
+									onChange={handleInputChange}
+									placeholder="e.g. Central General Hospital"
+									className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+									required
+								/>
+							</div>
+							<div>
+								<label className="block text-sm font-medium text-gray-700 mb-2">
+									STAFF NAME
+								</label>
+								<input
+									type="text"
+									name="hospitalName"
+									value={formData.staffName}
 									onChange={handleInputChange}
 									placeholder="e.g. Central General Hospital"
 									className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
