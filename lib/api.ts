@@ -2,6 +2,7 @@ import axios from "axios";
 import { RegisterRequest, LoginRequest, AuthResponse } from "../types/auth";
 import { DashboardResponse } from "../types/dashboard";
 import { LatestVitals } from "../types/LatestVitals";
+import { Alert } from "../types/Alert";
 
 const API_BASE_URL = "https://063db69c-8000.uks1.devtunnels.ms/api";
 
@@ -64,6 +65,22 @@ export const patientsApi = {
 			return response.data as LatestVitals;
 		} catch (err) {
 			console.error(`[patientsApi.getVitals] patientId=${patientId}`, err);
+			throw err;
+		}
+	},
+	getPatientAlert: async (patientId: string): Promise<Alert[]> => {
+		try {
+			const response = await api.get(
+				`/monitoring/patients/${patientId}/alerts/`,
+			);
+			// API may return { results: [...] } or a plain array
+			const data = response.data;
+			return Array.isArray(data) ? data : (data?.results ?? []);
+		} catch (err) {
+			console.error(
+				`[patientsApi.getPatientAlert] patientId=${patientId}`,
+				err,
+			);
 			throw err;
 		}
 	},

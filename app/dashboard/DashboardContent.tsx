@@ -13,6 +13,8 @@ import LogoutButton from "../../components/dashboard/LogoutButton";
 import { useAuthStore } from "../../store/authStore";
 import { useDashboardStore } from "../../store/dashboardStore";
 import { useDashboardData, usePatients } from "../../hooks/useDashboard";
+import AlertModal from "../../components/dashboard/AlertModal";
+import { useGlobalAlertPolling } from "../../hooks/useGlobalAlertPolling";
 
 export default function DashboardContent() {
 	const pathname = usePathname();
@@ -24,6 +26,8 @@ export default function DashboardContent() {
 	const patients = useDashboardStore((state) => state.patients);
 	const alerts = useDashboardStore((state) => state.alerts);
 	const stats = useDashboardStore((state) => state.stats);
+
+	const { activeAlert, dismissActiveAlert } = useGlobalAlertPolling();
 
 	const navItems = [
 		{ name: "Dashboard", href: "/dashboard", icon: Grid },
@@ -37,6 +41,9 @@ export default function DashboardContent() {
 
 	return (
 		<RouteGuard>
+			{activeAlert && (
+				<AlertModal alert={activeAlert} onDismiss={dismissActiveAlert} />
+			)}
 			<div className="flex h-screen">
 				<aside className="w-64 border-r bg-gray-50/50 p-4 flex flex-col h-full">
 					<div className="flex items-center gap-2 mb-8">
