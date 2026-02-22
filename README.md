@@ -14,6 +14,10 @@ Sentinel is a real-time patient monitoring dashboard built with Next.js, React, 
 - **Tailwind CSS**: Styling
 - **Lucide React**: Icon set
 
+## Login Information
+- Email - michaelokun@gmail.com
+- Password - versatile31
+
 ## Key Features
 
 - **Global Alert Polling**: Polls for CRITICAL alerts for patient PAT004 every 7 seconds, shows modal from anywhere in dashboard
