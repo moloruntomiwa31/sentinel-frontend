@@ -65,7 +65,7 @@ export default function PatientDetail() {
 			{activeAlert && (
 				<AlertModal alert={activeAlert} onDismiss={dismissActiveAlert} />
 			)}
-			<div className="min-h-screen bg-gray-950 text-white flex flex-col">
+			<div className="min-h-screen bg-gray-950 text-white flex flex-col font-raleway">
 				{/* ── Header ─────────────────────────────────────────────── */}
 				<header className="bg-gray-900 border-b border-gray-800 px-6 py-4 flex items-center gap-4">
 					<Link

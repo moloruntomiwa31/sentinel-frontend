@@ -44,8 +44,8 @@ export default function DashboardContent() {
 			{activeAlert && (
 				<AlertModal alert={activeAlert} onDismiss={dismissActiveAlert} />
 			)}
-			<div className="flex h-screen">
-				<aside className="w-64 border-r bg-gray-50/50 p-4 flex flex-col h-full">
+			<div className="flex h-screen font-raleway">
+				<aside className="w-64 border-r bg-gray-50/50 p-4 flex flex-col h-full font-raleway">
 					<div className="flex items-center gap-2 mb-8">
 						<Image
 							src="/images/app-logo.png"
@@ -53,7 +53,7 @@ export default function DashboardContent() {
 							height={60}
 							alt="App Logo"
 						/>
-						<h2 className="font-extrabold uppercase text-2xl text-blue-500 tracking-tight">
+						<h2 className="font-extrabold uppercase text-2xl text-blue-500 tracking-tight font-raleway">
 							Sentinel
 						</h2>
 					</div>
@@ -101,7 +101,7 @@ export default function DashboardContent() {
 					</footer>
 				</aside>
 
-				<main className="flex-1 p-8 bg-gray-900 text-white overflow-y-auto">
+				<main className="flex-1 p-8 bg-gray-900 text-white overflow-y-auto font-raleway">
 					<DashboardHeader />
 					{isError ? (
 						<div className="flex flex-col items-center justify-center h-64 gap-3 text-center">

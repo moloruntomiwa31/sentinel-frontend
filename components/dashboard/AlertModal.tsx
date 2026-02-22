@@ -97,12 +97,12 @@ export default function AlertModal({ alert, onDismiss }: AlertModalProps) {
 	return (
 		/* Backdrop */
 		<div
-			className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+			className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 font-raleway"
 			onClick={onDismiss}
 		>
 			{/* Panel */}
 			<div
-				className={`relative w-full max-w-md rounded-2xl border ${meta.border} ${meta.bg} bg-gray-900 shadow-2xl flex flex-col overflow-hidden`}
+				className={`relative w-full max-w-md rounded-2xl border ${meta.border} ${meta.bg} bg-gray-900 shadow-2xl flex flex-col overflow-hidden font-raleway`}
 				onClick={(e) => e.stopPropagation()}
 			>
 				{/* ── Countdown progress bar (top edge) ────────────── */}
